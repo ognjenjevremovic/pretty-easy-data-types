@@ -1,7 +1,7 @@
 {
   "name": "pretty-easy-data-types",
   "version": "1.0.0",
-  "description": "Utility library for checking the type of the value",
+  "description": "Utility library for checking the data type value",
   "author": "Ognjen Jevremović <jevremovic.ognjen@gmail.com> (https://github.com/ognjenjevremovic)",
   "homepage": "https://github.com/ognjenjevremovic/pretty-easy-data-types",
    "bugs": {
