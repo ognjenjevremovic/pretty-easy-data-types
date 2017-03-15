@@ -1,14 +1,35 @@
 {
   "name": "pretty-easy-type-check",
-  "version": "0.0.1",
-  "description": "Checks the type of the value passed",
+  "version": "1.0.0",
+  "description": "Utility library for checking the type of the value",
+  "author": "Ognjen Jevremović <jevremovic.ognjen@gmail.com> (https://github.com/ognjenjevremovic)",
+  "homepage": "https://github.com/ognjenjevremovic/pretty-easy-type-check",
+   "bugs": {
+    "url": "https://github.com/ognjenjevremovic/pretty-easy-type-check/issues",
+    "email": "ognjen.jevremovic@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ognjenjevremovic/pretty-easy-type-check.git"
+  },
+  "license": "MIT",
   "main": "index.js",
+  "types": "./index.d.ts",
   "scripts": {
     "test": "mocha ./tests/spec.js"
   },
-  "types": "index.d.ts",
-  "author": "Ognjen Jevremovic",
-  "license": "MIT",
+  "keywords": [
+    "pretty-easy-type-check",
+    "pretty-easy-*",
+    "pretty-easy",
+    "prettyeasy",
+    "type-check",
+    "check-type",
+    "value type check",
+    "check value type",
+    "check type",
+    "type check"
+  ],
   "devDependencies": {
     "@types/mocha": "^2.2.40",
     "@types/node": "^7.0.8",
