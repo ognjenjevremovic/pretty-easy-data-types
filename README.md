@@ -28,6 +28,7 @@ const dataTypeChecks = require('pretty-easy-data-types');
 ```javascript
 const { isString, isArray, isNull } = require('pretty-easy-data-types');
 ```
+&nbsp;
 
 If you use TypeScript:
  * import the whole library
@@ -38,6 +39,7 @@ import checks from 'pretty-easy-data-types'
 ```typescript
 import { isBoolean, isNumber } from 'pretty-easy-data-types'
 ```
+&nbsp;
 
 The library exposes a few utility functions for you to call and supply with a value for which you'd like to get it's data type or you'd like to check if it is of certain data type.
 
@@ -69,6 +71,7 @@ getType({bar: 'baz'})           //  'object'
 getType(new String('f00'));     //  'string'
 getType('bar');                 //  'string'
 ```
+&nbsp;
 
 ### Check for certain data type
 ```javascript
@@ -92,7 +95,6 @@ isNumber(25)        //  true
 isObject(['f00', 12, null])     //  false
 isArray(['f00', 12, null])      //  true
 ```
-
 
 &nbsp;
 
