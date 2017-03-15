@@ -1,0 +1,24 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+// export { getType } from './typeChecks/getType';
+var isArray_1 = require("./typeChecks/isArray");
+exports.isArray = isArray_1.isArray;
+var isBoolean_1 = require("./typeChecks/isBoolean");
+exports.isBoolean = isBoolean_1.isBoolean;
+var isDate_1 = require("./typeChecks/isDate");
+exports.isDate = isDate_1.isDate;
+var isError_1 = require("./typeChecks/isError");
+exports.isError = isError_1.isError;
+var isNull_1 = require("./typeChecks/isNull");
+exports.isNull = isNull_1.isNull;
+var isNumber_1 = require("./typeChecks/isNumber");
+exports.isNumber = isNumber_1.isNumber;
+var isObject_1 = require("./typeChecks/isObject");
+exports.isObject = isObject_1.isObject;
+var isString_1 = require("./typeChecks/isString");
+exports.isString = isString_1.isString;
+var isUndefined_1 = require("./typeChecks/isUndefined");
+exports.isUndefined = isUndefined_1.isUndefined;
+var getType_1 = require("./getType");
+exports.getType = getType_1.getType;
+//# sourceMappingURL=index.js.map

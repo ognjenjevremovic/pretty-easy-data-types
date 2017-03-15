@@ -1,0 +1,10 @@
+export { isArray } from './typeChecks/isArray';
+export { isBoolean } from './typeChecks/isBoolean';
+export { isDate } from './typeChecks/isDate';
+export { isError } from './typeChecks/isError';
+export { isNull } from './typeChecks/isNull';
+export { isNumber } from './typeChecks/isNumber';
+export { isObject } from './typeChecks/isObject';
+export { isString } from './typeChecks/isString';
+export { isUndefined } from './typeChecks/isUndefined';
+export { getType } from './getType';
