@@ -4,7 +4,7 @@
 [![Tests][tests-image]][travis-url]
 
 ### *What is pretty-easy-data-types?*
-***pretty-easy-data-types*** *is a small utility NodeJS library for checking the value data types*.
+***pretty-easy-data-types*** *is a small utility NodeJS library for checking the data type values*.
 
 &nbsp;
 
@@ -18,6 +18,7 @@ $ npm install pretty-easy-data-types
 
 # Usage
 After installing the module (localy in your project directory), in order to use it in your file you first need to require it.
+&nbsp;
 
 You can:
  * import the whole library

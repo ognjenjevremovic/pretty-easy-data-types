@@ -1,10 +1,10 @@
 {
   "name": "pretty-easy-data-types",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility library for checking the data type value",
   "author": "Ognjen Jevremović <jevremovic.ognjen@gmail.com> (https://github.com/ognjenjevremovic)",
   "homepage": "https://github.com/ognjenjevremovic/pretty-easy-data-types",
-   "bugs": {
+  "bugs": {
     "url": "https://github.com/ognjenjevremovic/pretty-easy-data-types/issues",
     "email": "ognjen.jevremovic@gmail.com"
   },
@@ -14,7 +14,7 @@
   },
   "license": "MIT",
   "main": "index.js",
-  "types": "./index.d.ts",
+  "types": "index.d.ts",
   "scripts": {
     "test": "mocha ./tests/spec.js"
   },
@@ -24,19 +24,30 @@
     "pretty-easy",
     "prettyeasy",
     "data-types",
-    "check-types",
-    "types-check",
-    "data type value check",
-    "value type check",
-    "check value type",
-    "check value types",
     "data types",
+    "check-type",
+    "check type",
+    "check-types",
+    "check types",
+    "type-check",
+    "type check",
+    "types-check",
+    "types check",
+    "data-type-check",
+    "data type check",
+    "value-type-check",
+    "value type check",
+    "check-value-type",
+    "check value type",
+    "check-value-types",
+    "check value types",
     "type check",
     "type checks"
   ],
   "devDependencies": {
     "@types/mocha": "^2.2.40",
     "@types/node": "^7.0.8",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "typescript": "^2.2.1"
   }
 }
