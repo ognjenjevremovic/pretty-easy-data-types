@@ -1,4 +1,3 @@
-// export { getType } from './typeChecks/getType';
 export { isArray } from './typeChecks/isArray';
 export { isBoolean } from './typeChecks/isBoolean';
 export { isDate } from './typeChecks/isDate';
