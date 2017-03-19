@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// export { getType } from './typeChecks/getType';
 var isArray_1 = require("./typeChecks/isArray");
 exports.isArray = isArray_1.isArray;
 var isBoolean_1 = require("./typeChecks/isBoolean");

@@ -1,0 +1,1 @@
+{"version":3,"file":"getDataType.js","sourceRoot":"","sources":["../../../tests/getDataTypes/getDataType.ts"],"names":[],"mappings":";;AAAA,gBAAgB;AAChB,+BAAiC;AACjC,oCAAoC;AAGpC;;;;;;;;;GASG;AACH,qBAA4B,QAAgB,EAAE,aAAkB,EAAE,KAAW;IACzE,EAAE,CAAC,uBAAqB,QAAQ,eAAY,EAAE,cAAM,OAAA,MAAM,CAAC,KAAK,CAAC,gBAAO,CAAC,KAAK,CAAC,EAAE,aAAa,CAAC,EAA3C,CAA2C,CAAC,CAAC;AACrG,CAAC;AAFD,kCAEC"}
