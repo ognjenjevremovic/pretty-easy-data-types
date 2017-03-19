@@ -1,7 +1,12 @@
 # pretty-easy-data-types
+
+&nbsp;
+
 [![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
+[![Build Status - Travis CI][travis-image]][travis-url]
+[![Build Status - Appveyor][appveyor-image]][appveyor-url]
 [![Tests][tests-image]][travis-url]
+[![Dependancies][dependancy-image]][dependancy-url]
 
 ### *What is pretty-easy-data-types?*
 ***pretty-easy-data-types*** *is a small utility NodeJS library for checking the data type values*.
@@ -33,11 +38,11 @@ const { isString, isArray, isNull } = require('pretty-easy-data-types');
 
 If you use TypeScript:
  * import the whole library
-```typescript
+```javascript
 import checks from 'pretty-easy-data-types'
 ```
  * import the components you need
-```typescript
+```javascript
 import { isBoolean, isNumber } from 'pretty-easy-data-types'
 ```
 &nbsp;
@@ -50,6 +55,8 @@ The library exposes a few utility functions for you to call and supply with a va
 
 ### Get data type of value
 ```javascript
+//  Import the necessary dependancies
+//  from the library
 const { getType } = require('pretty-easy-data-types');
 
 getType('foo')                  //  'string'
@@ -63,19 +70,19 @@ getType(['f00', false, 2])      //  'array'
 getType({bar: 'baz'})           //  'object'
 
 /*
-*   Note that you can, if for some reason you do it that way, 
-*   use the classes to construct your values for built-in data types :
+*   If for some reason you do use built in classes
+*   for constructing your values (for built-in data types), such as :
 *   String, Number, Array, Object, etc...
 *
-*   For example, the two will return the same value
 */
 getType(new String('f00'));     //  'string'
-getType('bar');                 //  'string'
 ```
 &nbsp;
 
 ### Check for certain data type
 ```javascript
+//  Import the necessary dependancies
+//  from library
 const {
     isString, isNumber, isBoolean
     isNull, isUndefined,
@@ -83,18 +90,28 @@ const {
     isArray, isObject
 }
 
-isString('')        //  true
-isNumber(25)        //  true
+isString('')            //  true
+isNumber(25)            //  true
+isBoolean(false)        //  true
+isUndefined()           //  true
+isNull(null)            //  true
+isDate(new Date())      //  true
+isError(new Error())    //  true
+isArray(['f00'])        //  true
+isObject({val: false})  //  true
+
+
 /*
-*   ... and so on
+*   Note that objects and arrays
+*   are of different data types!
 *
-*   Note however, that objects and arrays
-*   are of different data types.
 *   This is exteremely important, and something
-*   that you should be aware of!
+*   that you should be aware of
 */
-isObject(['f00', 12, null])     //  false
-isArray(['f00', 12, null])      //  true
+const array = ['f00', 12, null]; 
+
+isObject(array)     //  false
+isArray(array)      //  true
 ```
 
 &nbsp;
@@ -115,4 +132,8 @@ Licensed under the [MIT](https://github.com/ognjenjevremovic/pretty-easy-data-ty
 [npm-url]: https://npmjs.org/package/pretty-easy-data-types
 [travis-image]: https://img.shields.io/travis/ognjenjevremovic/pretty-easy-data-types/master.svg
 [travis-url]: https://travis-ci.org/ognjenjevremovic/pretty-easy-data-types
-[tests-image]: https://img.shields.io/badge/test-passing-green.svg
+[appveyor-image]: https://ci.appveyor.com/api/projects/status/y2hrdv2v9otm07f7?svg=true
+[appveyor-url]: https://ci.appveyor.com/project/ognjenjevremovic/pretty-easy-data-types
+[tests-image]: https://img.shields.io/badge/tests-passing-green.svg
+[dependancy-image]: https://david-dm.org/ognjenjevremovic/pretty-easy-data-types/status.svg
+[dependancy-url]: https://david-dm.org/ognjenjevremovic/pretty-easy-data-types
