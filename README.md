@@ -39,11 +39,11 @@ const { isString, isArray, isNull } = require('pretty-easy-data-types');
 If you use TypeScript:
  * import the whole library
 ```javascript
-import checks from 'pretty-easy-data-types'
+import * as dataTypeChecks from 'pretty-easy-data-types';
 ```
  * import the components you need
 ```javascript
-import { isBoolean, isNumber } from 'pretty-easy-data-types'
+import { isBoolean, isNumber } from 'pretty-easy-data-types';
 ```
 &nbsp;
 
@@ -59,6 +59,7 @@ The library exposes a few utility functions for you to call and supply with a va
 //  from the library
 const { getType } = require('pretty-easy-data-types');
 
+//  Perform the checks
 getType('foo')                  //  'string'
 getType(25)                     //  'number'
 getType(false)                  //  'boolean'
@@ -68,15 +69,42 @@ getType(new Date())             //  'date'
 getType(new Error())            //  'error'
 getType(['f00', false, 2])      //  'array'
 getType({bar: 'baz'})           //  'object'
+```
+
+&nbsp;
+
+### Do NOT use built-in constructors for primitive values! (JavaScript 101)
+If for some reason you do use built in constructor classes for constructing your primitive values, such as :
+ * Strings,
+ * Numbers and
+ * Booleans
+
+You should stop doing it asap, before your hurt somebody!
+Consider the following example.
+
+```javascript
+/*
+*   It has no impact on string values
+*/
+const myString = new String('f00');
+console.log(myString);          //  'f00'
+getType(myString);              //  'string'
 
 /*
-*   If for some reason you do use built in classes
-*   for constructing your values (for built-in data types), such as :
-*   String, Number, Array, Object, etc...
-*
+*   But do note that using the Number constructor
+*   can produce some unwanted results and introduce
+*   hard to trace bugs due to the quirky nature of JavaScript.
+*   
+*   Consider the following :
 */
-getType(new String('f00'));     //  'string'
+const myNum = new Number('This is not a number');
+console.log(myNum);         //  NaN
+isNumber(myNum);            //  true
 ```
+
+This is due how JavaScript language works as NaN value is treated as an instance of Number class!
+That's why you should AVOID using built-in constructor classes for primitive values and just use the simpler, shorter and more conviniant way of just declaring them instead.
+
 &nbsp;
 
 ### Check for certain data type
