@@ -192,7 +192,7 @@ The module follows the Semantic Versioning standard to communicate what kinds of
 
 ### Want to contribute?
 **Great!**
-Anyone can help make this project better - check out the [github](https://github.com/ognjenjevremovic/pretty-easy-data-types) repository!
+Anyone can help make this project better - check out the [github](https://github.com/ognjenjevremovic/pretty-easy-data-types) repository and make a pull request!
 
 ### Found a bug?
 Please open a an [issue](https://github.com/ognjenjevremovic/pretty-easy-data-types/issues).
