@@ -1,17 +1,44 @@
 //  Dependancies
-import { getDataType } from './getDataType';
+import { default as validate } from './validate';
 
 
-//  String data type values
-export function stringDataType(): void {
-    describe('String', () => {
-        getDataType('String', 'string', '');
-        getDataType('String', 'string', '    ');
-        getDataType('String', 'string', '0');
-        getDataType('String', 'string', 'null');
-        getDataType('String', 'string', 'undefined');
-        getDataType('String', 'string', 'false');
-        getDataType('String', 'string', '[]');
-        getDataType('String', 'string', '{ foo: "bar" }');
+/**
+ * @description
+ *  String parameters for which assertion is performed
+ *
+ * @returns {string[]}
+ */
+function getAssertionArguments() : string[] {
+
+    return [
+        '',
+        '    ',
+        'false',
+        '0',
+        'string data type',
+        'lorem ipsum',
+        new Date().toString(),
+        '333555',
+        'false',
+        'should return true'
+    ];
+}
+
+/**
+ * @description
+ *  String parameter value/data type tests.
+ *
+ * @export
+ * @returns {*}
+ */
+export default function() : void {
+
+    describe('String value/data type', () : void => {
+
+        const info : string = 'from string';
+
+        for(const parameter of getAssertionArguments()) {
+            validate(info, 'string', parameter);
+        }
     });
 }

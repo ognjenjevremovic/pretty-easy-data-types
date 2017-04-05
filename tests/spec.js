@@ -1,13 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 //  Dependancies
-var getDataTypes_1 = require("./getDataTypes");
 var dataTypeChecks_1 = require("./dataTypeChecks");
-//  Test group
-//  get data type of the values passed
-describe('Get the data type of the values', getDataTypes_1.getDataTypes);
-//  Test group
-//  compare the data type passed
-//  with the expected value
-describe('Check if it the value is of data type assumed', dataTypeChecks_1.checkDataTypes);
+var getDataTypes_1 = require("./getDataTypes");
+/**
+ * @description
+ *  Perform the batch test, testing getDataType method
+ *
+ * @returns {*}
+*/
+describe('Get the data type of the parameters provided', getDataTypes_1.default);
+/**
+ * @description
+ *  Perform the batch test, testing is* methods
+ *
+ * @returns {*}
+*/
+describe('Check if it the parameter is of data type expected', dataTypeChecks_1.default);
 //# sourceMappingURL=spec.js.map

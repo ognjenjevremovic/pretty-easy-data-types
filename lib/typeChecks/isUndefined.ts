@@ -1,12 +1,13 @@
 //  Dependancy
-import { getType } from '../getType';
+import { getType as getValuesDataType } from '..';
+
 
 /**
  * @description
- *  Checks if the provided value is undefined
+ *  Checks if the provided value is of an undefined data type
  *
  * @export
  * @param {*} value
  * @returns {boolean}
  */
-export const isUndefined = (value: any): boolean => getType(value) === 'undefined';
+export default (valueSupplied : any) : boolean => getValuesDataType(valueSupplied) === 'undefined';

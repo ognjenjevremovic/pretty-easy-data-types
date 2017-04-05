@@ -1,12 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 //  Dependancies
-var getDataType_1 = require("./getDataType");
-//  null data type values
-function nullDataType() {
-    describe('Null', function () {
-        getDataType_1.getDataType('null', 'null', null);
+var validate_1 = require("./validate");
+/**
+ * @description
+ *  Null value parameter value/data type test.
+ *
+ * @export
+ * @returns {*}
+ */
+function default_1() {
+    describe('Null value/data type', function () {
+        var info = 'from null';
+        validate_1.default(info, 'null', null);
     });
 }
-exports.nullDataType = nullDataType;
+exports.default = default_1;
 //# sourceMappingURL=null.js.map

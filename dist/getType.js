@@ -1,17 +1,24 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-//  Get a string representation of a value type
-var getString = Object.prototype.toString;
 /**
- * @description Returns a type of the value passed
+ * @description
+ *  Get the string representation of value's data type
+ *
+ * @returns {() => string}
+ */
+var getStringRepresentationOfDataType = Object.prototype.toString;
+/**
+ * @description
+ *  Returns a string representing the data type
+ *  of the argument supplied, in all lowercase letters
  *
  * @export
- * @param {*} [value]
+ * @param {*} value
  * @returns {string}
  */
-function getType(value) {
-    var check = getString.call(value).split(' ');
-    return check[1].substring(0, check[1].length - 1).toLocaleLowerCase();
-}
-exports.getType = getType;
+exports.default = function (valueSupplied) { return getStringRepresentationOfDataType
+    .call(valueSupplied)
+    .split(' ')[1]
+    .replace(/\W/g, '')
+    .toLocaleLowerCase(); };
 //# sourceMappingURL=getType.js.map

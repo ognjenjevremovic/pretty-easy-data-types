@@ -1,1 +1,0 @@
-{"version":3,"file":"isBoolean.js","sourceRoot":"","sources":["../../../tests/dataTypeChecks/isBoolean.ts"],"names":[],"mappings":";;AAAA,gBAAgB;AAChB,oCAAsC;AACtC,iDAA2C;AAG3C,4BAA4B;AAC5B;IACI,QAAQ,CAAC,mBAAmB,EAAE;QAC1B,wBAAQ,CAAC,SAAS,EAAE,kBAAS,EAAE,IAAI,CAAC,CAAC;QACrC,wBAAQ,CAAC,SAAS,EAAE,kBAAS,EAAE,KAAK,CAAC,CAAC;IAC1C,CAAC,CAAC,CAAC;AACP,CAAC;AALD,kDAKC"}

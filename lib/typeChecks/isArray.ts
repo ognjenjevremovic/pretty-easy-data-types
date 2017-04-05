@@ -1,13 +1,13 @@
 //  Dependancy
-import { getType } from '../getType';
+import { getType as getValuesDataType } from '..';
+
 
 /**
  * @description
- *  Checks if the provided value is an array of values
- *  or an instance of Array
+ *  Checks if the provided value is of an Array data type
  *
  * @export
  * @param {*} value
  * @returns {boolean}
  */
-export const isArray = (value: any): boolean => getType(value) === 'array';
+export default (valueSupplied : any) : boolean => getValuesDataType(valueSupplied) === 'array';

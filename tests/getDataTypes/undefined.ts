@@ -1,11 +1,21 @@
 //  Dependancies
-import { getDataType } from './getDataType';
+import { default as validate } from './validate';
 
 
-//  Undefined data type values
-export function undefinedDataType(): void {
-    describe('undefined', () => {
-        getDataType('undefined', 'undefined');
-        getDataType('undefined', 'undefined', undefined);
+/**
+ * @description
+ *  Undefined parameter value/data type tests.
+ *
+ * @export
+ * @returns {*}
+ */
+export default function() : void {
+
+    describe('Undefined value/data type', () : void => {
+
+        const info : string = 'from undefined';
+
+        validate(info, 'undefined');
+        validate(info, 'undefined', undefined);
     });
 }

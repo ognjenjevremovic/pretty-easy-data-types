@@ -1,12 +1,13 @@
 //  Dependancy
-import { getType } from '../getType';
+import { getType as getValuesDataType } from '..';
+
 
 /**
  * @description
- *  Checks if the provided value is null
+ *  Checks if the provided value is of a null data type
  *
  * @export
  * @param {*} value
  * @returns {boolean}
  */
-export const isNull = (value: any): boolean => getType(value) === 'null';
+export default (valueSupplied : any) : boolean => getValuesDataType(valueSupplied) === 'null';

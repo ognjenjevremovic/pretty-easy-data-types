@@ -1,12 +1,13 @@
 //  Dependancy
-import { getType } from '../getType';
+import { getType as getValuesDataType } from '..';
+
 
 /**
  * @description
- *  Checks if the provided value is boolean
+ *  Checks if the provided value is of a boolean data type
  *
  * @export
  * @param {*} value
  * @returns {boolean}
  */
-export const isBoolean = (value: any): boolean => getType(value) === 'boolean';
+export default (valueSupplied : any) : boolean => getValuesDataType(valueSupplied) === 'boolean';

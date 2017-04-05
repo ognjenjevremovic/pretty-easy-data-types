@@ -1,15 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 //  Dependancy
-var getType_1 = require("../getType");
+var __1 = require("..");
 /**
  * @description
- *  Checks if the provided value is
- *  an instance of Date class
+ *  Checks if the provided value is an instance of a Date class
  *
  * @export
  * @param {*} value
  * @returns {boolean}
  */
-exports.isDate = function (value) { return getType_1.getType(value) === 'date'; };
+exports.default = function (valueSupplied) { return __1.getType(valueSupplied) === 'date'; };
 //# sourceMappingURL=isDate.js.map

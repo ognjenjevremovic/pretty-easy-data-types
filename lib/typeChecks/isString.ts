@@ -1,13 +1,13 @@
 //  Dependancy
-import { getType } from '../getType';
+import { getType as getValuesDataType } from '..';
+
 
 /**
  * @description
- *  Checks if the provided value is string
- *  or an instance of String constructor
+ *  Checks if the provided value is of a string data type
  *
  * @export
  * @param {*} value
  * @returns {boolean}
  */
-export const isString = (value: any): boolean => getType(value) === 'string';
+export default (valueSupplied : any) : boolean => getValuesDataType(valueSupplied) === 'string';

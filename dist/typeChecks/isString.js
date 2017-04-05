@@ -1,15 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 //  Dependancy
-var getType_1 = require("../getType");
+var __1 = require("..");
 /**
  * @description
- *  Checks if the provided value is string
- *  or an instance of String constructor
+ *  Checks if the provided value is of a string data type
  *
  * @export
  * @param {*} value
  * @returns {boolean}
  */
-exports.isString = function (value) { return getType_1.getType(value) === 'string'; };
+exports.default = function (valueSupplied) { return __1.getType(valueSupplied) === 'string'; };
 //# sourceMappingURL=isString.js.map

@@ -1,13 +1,34 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 //  Dependancies
-var getDataType_1 = require("./getDataType");
-//  Boolean data type values
-function booleanDataType() {
-    describe('Boolean', function () {
-        getDataType_1.getDataType('Boolean', 'boolean', true);
-        getDataType_1.getDataType('Boolean', 'boolean', false);
+var validate_1 = require("./validate");
+/**
+ * @description
+ *  Boolean parameters for which assertion is performed
+ *
+ * @returns {boolean[]}
+ */
+function getAssertionArguments() {
+    return [
+        true,
+        false
+    ];
+}
+/**
+ * @description
+ *  Boolean parameter value/data type tests.
+ *
+ * @export
+ * @returns {*}
+ */
+function default_1() {
+    describe('Boolean value/data type', function () {
+        var info = 'from boolean';
+        for (var _i = 0, _a = getAssertionArguments(); _i < _a.length; _i++) {
+            var parameter = _a[_i];
+            validate_1.default(info, 'boolean', parameter);
+        }
     });
 }
-exports.booleanDataType = booleanDataType;
+exports.default = default_1;
 //# sourceMappingURL=boolean.js.map

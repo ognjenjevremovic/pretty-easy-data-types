@@ -1,16 +1,25 @@
-//  Get a string representation of a value type
-const getString : () => string = Object.prototype.toString;
+/**
+ * @description
+ *  Get the string representation of value's data type
+ *
+ * @returns {() => string}
+ */
+const getStringRepresentationOfDataType : () => string = Object.prototype.toString;
 
 
 /**
- * @description Returns a type of the value passed
+ * @description
+ *  Returns a string representing the data type
+ *  of the argument supplied, in all lowercase letters
  *
  * @export
- * @param {*} [value]
+ * @param {*} value
  * @returns {string}
  */
-export function getType(value: any): string {
-    const check: string[] = getString.call(value).split(' ');
-
-    return check[1].substring(0, check[1].length - 1).toLocaleLowerCase();
-}
+export default (
+    valueSupplied : any
+) : string => getStringRepresentationOfDataType
+    .call(valueSupplied)
+    .split(' ')[1]
+    .replace(/\W/g, '')
+    .toLocaleLowerCase();

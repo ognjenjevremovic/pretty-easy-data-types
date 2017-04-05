@@ -1,10 +1,20 @@
 //  Dependancies
-import { getDataType } from './getDataType';
+import { default as validate } from './validate';
 
 
-//  null data type values
-export function nullDataType(): void {
-    describe('Null', () => {
-        getDataType('null', 'null', null);
+/**
+ * @description
+ *  Null value parameter value/data type test.
+ *
+ * @export
+ * @returns {*}
+ */
+export default function() : void {
+
+    describe('Null value/data type', () : void => {
+
+        const info : string = 'from null';
+
+        validate(info, 'null', null);
     });
 }

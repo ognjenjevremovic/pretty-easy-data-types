@@ -1,13 +1,13 @@
 //  Dependancy
-import { getType } from '../getType';
+import { getType as getValuesDataType } from '..';
+
 
 /**
  * @description
- *  Checks if the provided value is
- *  an instance of Date class
+ *  Checks if the provided value is an instance of a Date class
  *
  * @export
  * @param {*} value
  * @returns {boolean}
  */
-export const isDate = (value: any): boolean => getType(value) === 'date';
+export default (valueSupplied : any) : boolean => getValuesDataType(valueSupplied) === 'date';

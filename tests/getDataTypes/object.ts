@@ -1,15 +1,40 @@
 //  Dependancies
-import { getDataType } from './getDataType';
+import { default as validate } from './validate';
 
 
-//  Object data type values
-export function objectDataType(): void {
-    describe('Object', () => {
-        getDataType('Object', 'object', {});
-        getDataType('Object', 'object', { value: 0 });
-        getDataType('Object', 'object', { value: '' });
-        getDataType('Object', 'object', { value: false });
-        getDataType('Object', 'object', { value: undefined });
-        getDataType('Object', 'object', { foo: 'bar', baz: 'f00' });
+/**
+ * @description
+ *  Object parameters for which assertion is performed
+ *
+ * @returns {Object[]}
+ */
+function getAssertionArguments() : object[] {
+
+    return [
+        { },
+        { name : 'Ognjen', age : 23 },
+        { some : 'value', falsey : false },
+        { num : 0 },
+        { exists : 0, defined : undefined, val : null },
+        { date : new Date(), year : new Date().getFullYear().toString() }
+    ];
+}
+
+/**
+ * @description
+ *  Object parameter value/data type tests.
+ *
+ * @export
+ * @returns {*}
+ */
+export default function() : void {
+
+    describe('Object value', () : void => {
+
+        const info : string = 'from Object';
+
+        for(const parameter of getAssertionArguments()) {
+            validate(info, 'object', parameter);
+        }
     });
 }

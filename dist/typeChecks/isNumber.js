@@ -1,15 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 //  Dependancy
-var getType_1 = require("../getType");
+var __1 = require("..");
 /**
  * @description
- *  Checks if the provided value is number
- *  or an instance of Number
+ *  Checks if the provided value is of a number data type
  *
  * @export
  * @param {*} value
  * @returns {boolean}
  */
-exports.isNumber = function (value) { return getType_1.getType(value) === 'number'; };
+exports.default = function (valueSupplied) { return __1.getType(valueSupplied) === 'number'; };
 //# sourceMappingURL=isNumber.js.map

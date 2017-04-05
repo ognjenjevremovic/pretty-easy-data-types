@@ -1,13 +1,20 @@
 //  Dependancies
-import { getDataTypes } from './getDataTypes';
-import { checkDataTypes } from './dataTypeChecks';
+import { default as performDataTypeCheckAgainstValue } from './dataTypeChecks';
+import { default as getDataTypeOfProvidedValues } from './getDataTypes';
 
 
-//  Test group
-//  get data type of the values passed
-describe('Get the data type of the values', getDataTypes);
+/**
+ * @description
+ *  Perform the batch test, testing getDataType method
+ *
+ * @returns {*}
+*/
+describe('Get the data type of the parameters provided', getDataTypeOfProvidedValues);
 
-//  Test group
-//  compare the data type passed
-//  with the expected value
-describe('Check if it the value is of data type assumed', checkDataTypes );
+/**
+ * @description
+ *  Perform the batch test, testing is* methods
+ *
+ * @returns {*}
+*/
+describe('Check if it the parameter is of data type expected', performDataTypeCheckAgainstValue);

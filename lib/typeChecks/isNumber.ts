@@ -1,13 +1,13 @@
 //  Dependancy
-import { getType } from '../getType';
+import { getType as getValuesDataType } from '..';
+
 
 /**
  * @description
- *  Checks if the provided value is number
- *  or an instance of Number
+ *  Checks if the provided value is of a number data type
  *
  * @export
  * @param {*} value
  * @returns {boolean}
  */
-export const isNumber = (value: any): boolean => getType(value) === 'number';
+export default (valueSupplied : any) : boolean => getValuesDataType(valueSupplied) === 'number';

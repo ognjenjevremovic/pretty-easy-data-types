@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 //  Dependancy
-var getType_1 = require("../getType");
+var __1 = require("..");
 /**
  * @description
- *  Checks if the provided value is boolean
+ *  Checks if the provided value is of a boolean data type
  *
  * @export
  * @param {*} value
  * @returns {boolean}
  */
-exports.isBoolean = function (value) { return getType_1.getType(value) === 'boolean'; };
+exports.default = function (valueSupplied) { return __1.getType(valueSupplied) === 'boolean'; };
 //# sourceMappingURL=isBoolean.js.map

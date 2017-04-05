@@ -1,13 +1,13 @@
 //  Dependancy
-import { getType } from '../getType';
+import { getType as getValuesDataType } from '..';
+
 
 /**
  * @description
- *  Checks if the provided value is
- *  an instance of Error class
+ *  Checks if the provided value is an instance of a Error class
  *
  * @export
  * @param {*} value
  * @returns {boolean}
  */
-export const isError = (value: any): boolean => getType(value) === 'error';
+export default (valueSupplied : any) : boolean => getValuesDataType(valueSupplied) === 'error';

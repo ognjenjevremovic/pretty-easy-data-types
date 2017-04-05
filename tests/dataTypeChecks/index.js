@@ -1,28 +1,36 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-//  Dependancies
-var isArray_1 = require("./isArray");
-var isBoolean_1 = require("./isBoolean");
-var isDate_1 = require("./isDate");
-var isError_1 = require("./isError");
-var isNull_1 = require("./isNull");
-var isNumber_1 = require("./isNumber");
-var isObject_1 = require("./isObject");
-var isString_1 = require("./isString");
-var isUndefined_1 = require("./isUndefined");
-//  Checks
-function checkDataTypes() {
+//  Tests
+var array_1 = require("./array");
+var boolean_1 = require("./boolean");
+var dateObject_1 = require("./dateObject");
+var errorObject_1 = require("./errorObject");
+var function_1 = require("./function");
+var null_1 = require("./null");
+var number_1 = require("./number");
+var object_1 = require("./object");
+var string_1 = require("./string");
+var undefined_1 = require("./undefined");
+/**
+ * @description
+ *  Batch test for checking the parameter's value data type.
+ *  Tests should pass!
+ *
+ * @export
+ */
+function default_1() {
     describe('Value passed is of', function () {
-        isArray_1.isValidArray();
-        isBoolean_1.isValidBooleanValue();
-        isDate_1.isValidDateObjectValue();
-        isError_1.isValidErrorObjectValue();
-        isNull_1.isValidNullValue();
-        isNumber_1.isValidNumberValue();
-        isObject_1.isValidObject();
-        isString_1.isValidStringValue();
-        isUndefined_1.isValidUndefinedValue();
+        array_1.default();
+        boolean_1.default();
+        dateObject_1.default();
+        errorObject_1.default();
+        function_1.default();
+        null_1.default();
+        number_1.default();
+        object_1.default();
+        string_1.default();
+        undefined_1.default();
     });
 }
-exports.checkDataTypes = checkDataTypes;
+exports.default = default_1;
 //# sourceMappingURL=index.js.map

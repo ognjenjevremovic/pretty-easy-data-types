@@ -1,15 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 //  Dependancy
-var getType_1 = require("../getType");
+var __1 = require("..");
 /**
  * @description
- *  Checks if the provided value is
- *  an instance of Error class
+ *  Checks if the provided value is an instance of a Error class
  *
  * @export
  * @param {*} value
  * @returns {boolean}
  */
-exports.isError = function (value) { return getType_1.getType(value) === 'error'; };
+exports.default = function (valueSupplied) { return __1.getType(valueSupplied) === 'error'; };
 //# sourceMappingURL=isError.js.map

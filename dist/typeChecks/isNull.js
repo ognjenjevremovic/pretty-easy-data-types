@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 //  Dependancy
-var getType_1 = require("../getType");
+var __1 = require("..");
 /**
  * @description
- *  Checks if the provided value is null
+ *  Checks if the provided value is of a null data type
  *
  * @export
  * @param {*} value
  * @returns {boolean}
  */
-exports.isNull = function (value) { return getType_1.getType(value) === 'null'; };
+exports.default = function (valueSupplied) { return __1.getType(valueSupplied) === 'null'; };
 //# sourceMappingURL=isNull.js.map

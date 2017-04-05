@@ -1,8 +1,2 @@
-/**
- * @description Returns a type of the value passed
- *
- * @export
- * @param {*} [value]
- * @returns {string}
- */
-export declare function getType(value: any): string;
+declare var _default: (valueSupplied: any) => string;
+export default _default;

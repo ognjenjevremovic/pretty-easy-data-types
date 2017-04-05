@@ -1,13 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 //  Dependancies
-var getDataType_1 = require("./getDataType");
-//  Undefined data type values
-function undefinedDataType() {
-    describe('undefined', function () {
-        getDataType_1.getDataType('undefined', 'undefined');
-        getDataType_1.getDataType('undefined', 'undefined', undefined);
+var validate_1 = require("./validate");
+/**
+ * @description
+ *  Undefined parameter value/data type tests.
+ *
+ * @export
+ * @returns {*}
+ */
+function default_1() {
+    describe('Undefined value/data type', function () {
+        var info = 'from undefined';
+        validate_1.default(info, 'undefined');
+        validate_1.default(info, 'undefined', undefined);
     });
 }
-exports.undefinedDataType = undefinedDataType;
+exports.default = default_1;
 //# sourceMappingURL=undefined.js.map

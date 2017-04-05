@@ -1,16 +1,39 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 //  Dependancies
-var getDataType_1 = require("./getDataType");
-//  Array data type values
-function arrayDataType() {
-    describe('Array', function () {
-        getDataType_1.getDataType('Array', 'array', []);
-        getDataType_1.getDataType('Array', 'array', [null, false, undefined]);
-        getDataType_1.getDataType('Array', 'array', ['', 0]);
-        getDataType_1.getDataType('Array', 'array', [{}, []]);
-        getDataType_1.getDataType('Array', 'array', ['f00', 20, { bar: 'baz' }]);
+var validate_1 = require("./validate");
+/**
+ * @description
+ *  Array parameters for which assertion is performed
+ *
+ * @returns {Array<any>}
+ */
+function getAssertionArguments() {
+    return [
+        [],
+        [''],
+        [['nested', ['like never before']]],
+        [0, false, null, undefined],
+        [{ name: 'Ognjen' }],
+        [new Error('custom'), new Error('error'), new Error('list')],
+        [555, true, 'string']
+    ];
+}
+/**
+ * @description
+ *  Array parameter value/data type tests.
+ *
+ * @export
+ * @returns {*}
+ */
+function default_1() {
+    describe('Array data type', function () {
+        var info = 'from Array';
+        for (var _i = 0, _a = getAssertionArguments(); _i < _a.length; _i++) {
+            var parameter = _a[_i];
+            validate_1.default(info, 'array', parameter);
+        }
     });
 }
-exports.arrayDataType = arrayDataType;
+exports.default = default_1;
 //# sourceMappingURL=array.js.map
