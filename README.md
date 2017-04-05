@@ -16,8 +16,9 @@
 # Install
 This is a [NodeJS](http://www.node.js) module available through the [npm](http://npmjs.org) registry. Installation is done using the **npm install** command:
 ```sh
-$ npm install pretty-easy-data-types
+$ npm install pretty-easy-data-types --save
 ```
+***--save*** *flag is used to save the module as a project dependancy in your package.json file.*
 
 &nbsp;
 
@@ -28,26 +29,26 @@ After installing the module (localy in your project directory), in order to use 
 You can:
  * import the whole library
 ```javascript
-const dataTypeChecks = require('pretty-easy-data-types');
+const dataTypes = require('pretty-easy-data-types');
 ```
- * or only the components you need
+ * or only the components you need (recommended way)
 ```javascript
-const { isString, isArray, isNull } = require('pretty-easy-data-types');
+const { geType, isString, isArray, isNull } = require('pretty-easy-data-types');
 ```
 &nbsp;
 
 If you use TypeScript:
  * import the whole library
 ```javascript
-import * as dataTypeChecks from 'pretty-easy-data-types';
+import * as dataTypes from 'pretty-easy-data-types';
 ```
- * import the components you need
+ * import the components you need (recommended way)
 ```javascript
-import { isBoolean, isNumber } from 'pretty-easy-data-types';
+import { getType, isBoolean, isNumber } from 'pretty-easy-data-types';
 ```
 &nbsp;
 
-The library exposes a few utility functions for you to call and supply with a value for which you'd like to get it's data type or you'd like to check if it is of certain data type.
+The library exposes a few utility functions for you to call and supply with a value for which you'd like to get a data type or you'd like to check if it is of certain data type value.
 
 &nbsp;
 
@@ -55,20 +56,24 @@ The library exposes a few utility functions for you to call and supply with a va
 
 ### Get data type of value
 ```javascript
-//  Import the necessary dependancies
-//  from the library
+/**
+*   We're going to import only the data type checker here,
+*   but you're free to import the whole library and then
+*   use the methods on the returned object; it's up to you
+*/
 const { getType } = require('pretty-easy-data-types');
 
 //  Perform the checks
-getType('foo')                  //  'string'
-getType(25)                     //  'number'
+getType(['f00', false, 2])      //  'array'
 getType(false)                  //  'boolean'
-getType()                       //  'undefined'
-getType(null)                   //  'null'
 getType(new Date())             //  'date'
 getType(new Error())            //  'error'
-getType(['f00', false, 2])      //  'array'
+getType(() => {})               //  'function'
+getType(null)                   //  'null'
+getType(25)                     //  'number'
 getType({bar: 'baz'})           //  'object'
+getType('foo')                  //  'string'
+getType()                       //  'undefined'
 ```
 
 &nbsp;
@@ -79,7 +84,7 @@ If for some reason you do use built in constructor classes for constructing your
  * Numbers and
  * Booleans
 
-You should stop doing it asap, before your hurt somebody!
+**You should stop doing it asap, before your hurt somebody!**
 Consider the following example.
 
 ```javascript
@@ -108,39 +113,80 @@ That's why you should AVOID using built-in constructor classes for primitive val
 &nbsp;
 
 ### Check for certain data type
-```javascript
-//  Import the necessary dependancies
-//  from library
-const {
-    isString, isNumber, isBoolean
-    isNull, isUndefined,
-    isDate, isError,
-    isArray, isObject
-}
 
-isString('')            //  true
-isNumber(25)            //  true
+```javascript
+//  Import the checks
+const {
+    isArray, isBoolean, isDate,
+    isError, isFunction ,isNull,
+    isNumber, isObject,
+    isString, isUndefined
+} = require('pretty-easy-data-types');
+
+isArray([ 'f00' ])      //  true
 isBoolean(false)        //  true
-isUndefined()           //  true
-isNull(null)            //  true
 isDate(new Date())      //  true
 isError(new Error())    //  true
-isArray(['f00'])        //  true
+isFunction(() => {})    //  true
+isNull(null)            //  true
+isNumber(25)            //  true
 isObject({val: false})  //  true
+isString('')            //  true
+isUndefined()           //  true
+```
 
+&nbsp;
 
-/*
-*   Note that objects and arrays
-*   are of different data types!
-*
-*   This is exteremely important, and something
-*   that you should be aware of
-*/
-const array = ['f00', 12, null]; 
+### Gotchas!
+There are a few gotchas that you should be aware of. One of which, that objects and arrays are of different data types. This is exteremely important!
+Instances of classes that derive from an Object class, such as Array, Error and Date data type values, have their own constructors - meaning, they're not instances of Object classes, but rather instances of their respective classes.
+
+```javascript
+const array = [ 'f00', 12, null ]; 
 
 isObject(array)     //  false
 isArray(array)      //  true
 ```
+
+&nbsp;
+
+## Releases
+The module follows the Semantic Versioning standard to communicate what kinds of changes are introduced in the new releases.
+
+### Versioning
+*Patch releases* : n.n.**X** -> Bug fixes, documentation updates, code cleanups, new test cases, optimization stuff and other minor changes that you should probably not be aware of;
+&nbsp;
+
+*Minor releases* : n.**X**.n -> New feature(s) which don't break the existing ones. These ofter refer to minor TypeScript API changes (mainly due to declarations; JavaScript code will not be affected by these changes), code refactoring, some under the sheet changes that you should not worry about too much;
+&nbsp;
+
+*Major releases* : **X**.n.n -> Changes that could *possibly* introduce the backwards compatibility issues. These are however very ***rare*** and could be relevant to you only in the case of an endpoint API change and the way you communicate with the module.
+
+&nbsp;
+
+## Changelogs
+
+&nbsp;
+**04/05** - *1.1.0*
+ * Update to unit test approach
+ * New test cases
+ * Minor improvements to the code
+
+**03/20** - *1.0.3*
+ * Documentation updates
+
+**03/19** - *1.0.2*
+ * Support for Node < 1.8 abbandoned
+ * Modular approach to unit tests
+ * New test cases
+ * Documentation updates to reflect the changes
+
+**03/16** - *v1.0.1*
+ * Documentation updates
+
+**03/15** - *v1.0.0*
+ * Initial release
+
 
 &nbsp;
 
