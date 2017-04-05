@@ -1,7 +1,7 @@
 {
   "name": "pretty-easy-data-types",
-  "version": "1.0.3",
-  "description": "Utility library for checking the data type of a supplied value",
+  "version": "1.1.0",
+  "description": "Utility library for checking the data type of a supplied parameter",
   "author": "Ognjen Jevremović <jevremovic.ognjen@gmail.com> (https://github.com/ognjenjevremovic)",
   "homepage": "https://github.com/ognjenjevremovic/pretty-easy-data-types",
   "bugs": {
@@ -19,7 +19,18 @@
     "node": ">=1.8"
   },
   "scripts": {
-    "test": "mocha ./tests/spec.js"
+    "test": "mocha ./tests/spec.js",
+    
+    "compile" : "npm run remove:compiled && npm run tsc && npm run move:test && npm run move:base",
+    "remove:compiled": "npm run remove:dist && npm run remove:tests",
+
+    "tsc": "tsc",
+
+    "move:base" : "cp -ap dist/lib/* dist/ && rm -rf dist/lib",
+    "move:test" : "cp -ap dist/tests/* tests/ && rm -rf dist/tests",
+
+    "remove:tests": "rm -f tests/*.js && rm -f tests/*.js.map && rm -f tests/*.d.ts && rm -f tests/**/*.js && rm -f tests/**/*.js.map && rm -f tests/**/*.d.ts",
+    "remove:dist": "rm -f ./dist/*.js && rm -f ./dist/*.js.map && rm -f ./dist/**/*.js && rm -f ./dist/**/*.js.map"
   },
   "keywords": [
     "pretty-easy-data-types",
