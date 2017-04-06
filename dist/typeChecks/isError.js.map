@@ -1,1 +1,1 @@
-{"version":3,"file":"isError.js","sourceRoot":"","sources":["../../../lib/typeChecks/isError.ts"],"names":[],"mappings":";;AAAA,cAAc;AACd,wBAAkD;AAGlD;;;;;;;GAOG;AACH,kBAAe,UAAC,aAAmB,IAAe,OAAA,WAAiB,CAAC,aAAa,CAAC,KAAK,OAAO,EAA5C,CAA4C,CAAC"}
+{"version":3,"file":"isError.js","sourceRoot":"","sources":["../../../lib/typeChecks/isError.ts"],"names":[],"mappings":";;AAAA,cAAc;AACd,wBAAmD;AAGnD;;;;;;;GAOG;AACH,kBAAe,UAAC,wBAA8B,IAAe,OAAA,WAAkB,CAAC,wBAAwB,CAAC,KAAK,OAAO,EAAxD,CAAwD,CAAC"}

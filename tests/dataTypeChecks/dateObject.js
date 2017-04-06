@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 //  Dependancies
-var _1 = require("../../");
+var __1 = require("../..");
 var validate_1 = require("./validate");
 /**
  * @description
@@ -22,14 +22,13 @@ function getAssertionArguments() {
  *  Instance of Date class parameter value/data type tests.
  *
  * @export
- * @returns {*}
  */
 function default_1() {
     describe('Date value/data type', function () {
-        var info = 'from instance of Date class';
+        var dataTypeOfArgumentSupplied = 'instance of Date class';
         for (var _i = 0, _a = getAssertionArguments(); _i < _a.length; _i++) {
-            var parameter = _a[_i];
-            validate_1.default(info, _1.isDate, parameter);
+            var argumentSuppliedToMethod = _a[_i];
+            validate_1.default(dataTypeOfArgumentSupplied, __1.isDate, argumentSuppliedToMethod);
         }
     });
 }

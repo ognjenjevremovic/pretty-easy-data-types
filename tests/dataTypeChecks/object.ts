@@ -1,6 +1,6 @@
 //  Dependancies
-import { isObject } from '../..';
-import { default as validate } from './validate';
+import { isObject as isArgumentOfObjectDataType } from '../..';
+import { default as performArgumentValidation } from './validate';
 
 
 /**
@@ -26,16 +26,19 @@ function getAssertionArguments() : object[] {
  *  Object parameter value/data type tests.
  *
  * @export
- * @returns {*}
  */
 export default function() : void {
 
     describe('Object value', () : void => {
 
-        const info : string = 'from Object';
+        const dataTypeOfArgumentSupplied : string = 'Object';
 
-        for(const parameter of getAssertionArguments()) {
-            validate(info, isObject, parameter);
+        for(const argumentSuppliedToMethod of getAssertionArguments()) {
+            performArgumentValidation(
+                dataTypeOfArgumentSupplied,
+                isArgumentOfObjectDataType,
+                argumentSuppliedToMethod
+            );
         }
     });
 }

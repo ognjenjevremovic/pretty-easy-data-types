@@ -17,9 +17,9 @@ const getStringRepresentationOfDataType : () => string = Object.prototype.toStri
  * @returns {string}
  */
 export default (
-    valueSupplied : any
+    valueSuppliedToTheMethod : any
 ) : string => getStringRepresentationOfDataType
-    .call(valueSupplied)
-    .split(' ')[1]
-    .replace(/\W/g, '')
-    .toLocaleLowerCase();
+        .call(valueSuppliedToTheMethod)
+        .split(' ')[1]
+        .replace(/\W/g, '')
+        .toLocaleLowerCase();

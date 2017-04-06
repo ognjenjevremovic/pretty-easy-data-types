@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 //  Dependancies
 var assert = require("assert");
 //  What should the module return
-var moduleShouldReturn = 'Should return boolean true ->';
+var moduleShouldReturn = 'Should return boolean true from ->';
 /**
  * @description
  *  Check if the method returns a boolean value of true.
@@ -11,11 +11,11 @@ var moduleShouldReturn = 'Should return boolean true ->';
  *
  * @export
  * @param {string} valueReturnedShouldBe
- * @param {(value : any) => boolean} isOfCertainDataTypeMethod
+ * @param {(argumentSuppliedToMethod : any) => boolean} isOfCertainDataTypeMethod
  * @param {*} [getDataTypeFromThisValue]
  */
-function default_1(valueReturnedShouldBe, isOfCertainDataTypeMethod, getDataTypeFromThisValue) {
-    it(moduleShouldReturn + " " + valueReturnedShouldBe + " value/data type", function () { return assert.equal(isOfCertainDataTypeMethod(getDataTypeFromThisValue), true); });
+function default_1(valueReturnedShouldBe, isOfCertainDataTypeMethod, getDataTypeFromValue) {
+    it("\n        " + moduleShouldReturn + " " + valueReturnedShouldBe + " data type value", function () { return assert.equal(isOfCertainDataTypeMethod(getDataTypeFromValue), true); });
 }
 exports.default = default_1;
 //# sourceMappingURL=validate.js.map

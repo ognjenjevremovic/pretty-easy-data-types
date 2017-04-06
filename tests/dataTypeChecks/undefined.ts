@@ -1,6 +1,6 @@
 //  Dependancies
-import { isUndefined } from '../..';
-import { default as validate } from './validate';
+import { isUndefined as isArgumentOfUndefinedDataType } from '../..';
+import { default as performArgumentValidation } from './validate';
 
 
 /**
@@ -8,15 +8,21 @@ import { default as validate } from './validate';
  *  Undefined parameter value/data type tests.
  *
  * @export
- * @returns {*}
  */
 export default function() : void {
 
     describe('Undefined value/data type', () : void => {
 
-        const info : string = 'from undefined';
+        const dataTypeOfArgumentSupplied : string = 'undefined';
 
-        validate(info, isUndefined);
-        validate(info, isUndefined, undefined);
+        performArgumentValidation(
+            dataTypeOfArgumentSupplied,
+            isArgumentOfUndefinedDataType
+        );
+        performArgumentValidation(
+            dataTypeOfArgumentSupplied,
+            isArgumentOfUndefinedDataType,
+            undefined
+        );
     });
 }

@@ -1,13 +1,13 @@
 //  Dependancy
-import { getType as getValuesDataType } from '..';
+import { getType as getDataTypeOfValue } from '..';
 
 
 /**
  * @description
- *  Checks if the provided value is of a null data type
+ *  Checks if provided argument is of a null data type
  *
  * @export
- * @param {*} value
+ * @param {*} argumentSuppliedToMethod
  * @returns {boolean}
  */
-export default (valueSupplied : any) : boolean => getValuesDataType(valueSupplied) === 'null';
+export default (argumentSuppliedToMethod : any) : boolean => getDataTypeOfValue(argumentSuppliedToMethod) === 'null';

@@ -1,13 +1,13 @@
 //  Dependancy
-import { getType as getValuesDataType } from '..';
+import { getType as getDataTypeOfValue } from '..';
 
 
 /**
  * @description
- *  Checks if the provided value is an instance of a Error class
+ *  Checks if provided argument is an instance of a Error class
  *
  * @export
- * @param {*} value
+ * @param {*} argumentSuppliedToMethod
  * @returns {boolean}
  */
-export default (valueSupplied : any) : boolean => getValuesDataType(valueSupplied) === 'error';
+export default (argumentSuppliedToMethod : any) : boolean => getDataTypeOfValue(argumentSuppliedToMethod) === 'error';

@@ -21,14 +21,13 @@ function getAssertionArguments() {
  *  Function parameter value/data type tests.
  *
  * @export
- * @returns {*}
  */
 function default_1() {
     describe('Function value', function () {
-        var info = 'from function';
+        var dataTypeOfArgumentSupplied = 'function';
         for (var _i = 0, _a = getAssertionArguments(); _i < _a.length; _i++) {
-            var parameter = _a[_i];
-            validate_1.default(info, 'function', parameter);
+            var argumentSuppliedToMethod = _a[_i];
+            validate_1.default(dataTypeOfArgumentSupplied, 'function', argumentSuppliedToMethod);
         }
     });
 }

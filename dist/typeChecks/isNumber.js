@@ -4,11 +4,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var __1 = require("..");
 /**
  * @description
- *  Checks if the provided value is of a number data type
+ *  Checks if provided argument is of a number data type
  *
  * @export
- * @param {*} value
+ * @param {*} argumentSuppliedToMethod
  * @returns {boolean}
  */
-exports.default = function (valueSupplied) { return __1.getType(valueSupplied) === 'number'; };
+exports.default = function (argumentSuppliedToMethod) { return __1.getType(argumentSuppliedToMethod) === 'number'; };
 //# sourceMappingURL=isNumber.js.map

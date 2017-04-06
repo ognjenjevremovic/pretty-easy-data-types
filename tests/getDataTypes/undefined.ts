@@ -1,5 +1,5 @@
 //  Dependancies
-import { default as validate } from './validate';
+import { default as performArgumentValidation } from './validate';
 
 
 /**
@@ -13,9 +13,16 @@ export default function() : void {
 
     describe('Undefined value/data type', () : void => {
 
-        const info : string = 'from undefined';
+        const dataTypeOfArgumentSupplied : string = 'undefined';
 
-        validate(info, 'undefined');
-        validate(info, 'undefined', undefined);
+        performArgumentValidation(
+            dataTypeOfArgumentSupplied,
+            'undefined'
+        );
+        performArgumentValidation(
+            dataTypeOfArgumentSupplied,
+            'undefined',
+            undefined
+        );
     });
 }

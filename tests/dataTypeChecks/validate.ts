@@ -3,24 +3,27 @@ import * as assert from 'assert';
 
 
 //  What should the module return
-const moduleShouldReturn : string = 'Should return boolean true ->';
+const moduleShouldReturn : string = 'Should return boolean true from ->';
 
 
 /**
  * @description
  *  Check if the method returns a boolean value of true.
  *  This is the test validator for all valid parameter values.
- * 
+ *
  * @export
  * @param {string} valueReturnedShouldBe
- * @param {(value : any) => boolean} isOfCertainDataTypeMethod
+ * @param {(argumentSuppliedToMethod : any) => boolean} isOfCertainDataTypeMethod
  * @param {*} [getDataTypeFromThisValue]
  */
 export default function(
     valueReturnedShouldBe     : string,
-    isOfCertainDataTypeMethod : (value : any) => boolean,
-    getDataTypeFromThisValue? : any
+    isOfCertainDataTypeMethod : (argumentSuppliedToMethod : any) => boolean,
+    getDataTypeFromValue?     : any
 ) : void {
 
-    it(`${moduleShouldReturn} ${valueReturnedShouldBe} value/data type`, () => assert.equal(isOfCertainDataTypeMethod(getDataTypeFromThisValue), true));
+    it(`
+        ${moduleShouldReturn} ${valueReturnedShouldBe} data type value`,
+        () => assert.equal(isOfCertainDataTypeMethod(getDataTypeFromValue), true)
+    );
 }

@@ -28,14 +28,13 @@ function getAssertionArguments() {
  *  String parameter value/data type tests.
  *
  * @export
- * @returns {*}
  */
 function default_1() {
     describe('String value/data type', function () {
-        var info = 'from string';
+        var dataTypeOfArgumentSupplied = 'string';
         for (var _i = 0, _a = getAssertionArguments(); _i < _a.length; _i++) {
-            var parameter = _a[_i];
-            validate_1.default(info, __1.isString, parameter);
+            var argumentSuppliedToMethod = _a[_i];
+            validate_1.default(dataTypeOfArgumentSupplied, __1.isString, argumentSuppliedToMethod);
         }
     });
 }

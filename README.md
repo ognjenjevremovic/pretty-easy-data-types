@@ -92,8 +92,8 @@ Consider the following example.
 *   It has no impact on string values
 */
 const myString = new String('f00');
-console.log(myString);          //  'f00'
-getType(myString);              //  'string'
+console.log(myString);      //  'f00'
+getType(myString);          //  'string'
 
 /*
 *   But do note that using the Number constructor
@@ -167,15 +167,19 @@ The module follows the Semantic Versioning standard to communicate what kinds of
 ## Changelogs
 
 &nbsp;
-**04/05** - *1.1.0*
+**04/06** - *v1.1.1*
+ * Code refactor
+ * Documentation typos corrected
+
+**04/05** - *v1.1.0*
  * Update to unit test approach
  * New test cases
  * Minor improvements to the code
 
-**03/20** - *1.0.3*
+**03/20** - *v1.0.3*
  * Documentation updates
 
-**03/19** - *1.0.2*
+**03/19** - *v1.0.2*
  * Support for Node < 1.8 abbandoned
  * Modular approach to unit tests
  * New test cases

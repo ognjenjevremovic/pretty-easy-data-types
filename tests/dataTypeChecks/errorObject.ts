@@ -1,6 +1,6 @@
 //  Dependancies
-import { isError } from '../..';
-import { default as validate } from './validate';
+import { isError as isArgumentOfErrorDataType } from '../..';
+import { default as performArgumentValidation } from './validate';
 
 
 /**
@@ -24,16 +24,19 @@ function getAssertionArguments() : Error[] {
  *  Instance of Error class parameter value/data type tests.
  *
  * @export
- * @returns {*}
  */
 export default function() : void {
 
     describe('Error value/data type', () : void => {
 
-        const info : string = 'from instance of Error class';
+        const dataTypeOfArgumentSupplied : string = 'instance of Error class';
 
-        for(const parameter of getAssertionArguments()) {
-            validate(info, isError, parameter);
+        for(const argumentSuppliedToMethod of getAssertionArguments()) {
+            performArgumentValidation(
+                dataTypeOfArgumentSupplied,
+                isArgumentOfErrorDataType,
+                argumentSuppliedToMethod
+            );
         }
     });
 }

@@ -1,6 +1,6 @@
 //  Dependancies
-import { isFunction } from '../..';
-import { default as validate } from './validate';
+import { isFunction as isArgumentOfFunctionDataType } from '../..';
+import { default as performArgumentValidation } from './validate';
 
 
 /**
@@ -24,16 +24,19 @@ function getAssertionArguments() : Function[] {
  *  Function parameter value/data type tests.
  *
  * @export
- * @returns {*}
  */
 export default function() : void {
 
     describe('Function value', () : void => {
 
-        const info : string = 'from function';
+        const dataTypeOfArgumentSupplied : string = 'function';
 
-        for(const parameter of getAssertionArguments()) {
-            validate(info, isFunction, parameter);
+        for(const argumentSuppliedToMethod of getAssertionArguments()) {
+            performArgumentValidation(
+                dataTypeOfArgumentSupplied,
+                isArgumentOfFunctionDataType,
+                argumentSuppliedToMethod
+            );
         }
     });
 }

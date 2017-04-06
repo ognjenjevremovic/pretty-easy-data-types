@@ -5,7 +5,7 @@
  *
  * @export
  * @param {string} valueReturnedShouldBe
- * @param {(value : any) => boolean} isOfCertainDataTypeMethod
+ * @param {(argumentSuppliedToMethod : any) => boolean} isOfCertainDataTypeMethod
  * @param {*} [getDataTypeFromThisValue]
  */
-export default function (valueReturnedShouldBe: string, isOfCertainDataTypeMethod: (value: any) => boolean, getDataTypeFromThisValue?: any): void;
+export default function (valueReturnedShouldBe: string, isOfCertainDataTypeMethod: (argumentSuppliedToMethod: any) => boolean, getDataTypeFromValue?: any): void;

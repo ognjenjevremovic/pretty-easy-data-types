@@ -1,13 +1,13 @@
 //  Dependancy
-import { getType as getValuesDataType } from '..';
+import { getType as getDataTypeOfValue } from '..';
 
 
 /**
  * @description
- *  Checks if the provided value is of a boolean data type
+ *  Checks if provided argument is of a boolean data type
  *
  * @export
- * @param {*} value
+ * @param {*} argumentSuppliedToMethod
  * @returns {boolean}
  */
-export default (valueSupplied : any) : boolean => getValuesDataType(valueSupplied) === 'boolean';
+export default (argumentSuppliedToMethod : any) : boolean => getDataTypeOfValue(argumentSuppliedToMethod) === 'boolean';

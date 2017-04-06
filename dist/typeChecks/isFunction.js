@@ -4,11 +4,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var __1 = require("..");
 /**
  * @description
- *  Checks if the provided value is of a function data type
+ *  Checks if provided argument is of a function data type
  *
  * @export
- * @param {*} value
+ * @param {*} argumentSuppliedToMethod
  * @returns {boolean}
  */
-exports.default = function (valueSupplied) { return __1.getType(valueSupplied) === 'function'; };
+exports.default = function (argumentSuppliedToMethod) { return __1.getType(argumentSuppliedToMethod) === 'function'; };
 //# sourceMappingURL=isFunction.js.map

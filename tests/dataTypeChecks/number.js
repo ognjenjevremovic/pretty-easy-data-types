@@ -25,14 +25,13 @@ function getAssertionArguments() {
  *  Number parameter value/data type tests.
  *
  * @export
- * @returns {*}
  */
 function default_1() {
     describe('Number value', function () {
-        var info = 'from number';
+        var dataTypeOfArgumentSupplied = 'number';
         for (var _i = 0, _a = getAssertionArguments(); _i < _a.length; _i++) {
-            var parameter = _a[_i];
-            validate_1.default(info, __1.isNumber, parameter);
+            var argumentSuppliedToMethod = _a[_i];
+            validate_1.default(dataTypeOfArgumentSupplied, __1.isNumber, argumentSuppliedToMethod);
         }
     });
 }

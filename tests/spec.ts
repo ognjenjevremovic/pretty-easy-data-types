@@ -1,6 +1,6 @@
 //  Dependancies
-import { default as performDataTypeCheckAgainstValue } from './dataTypeChecks';
-import { default as getDataTypeOfProvidedValues } from './getDataTypes';
+import { default as performDataTypeCheckOnProvidedParameter } from './dataTypeChecks';
+import { default as getDataTypeOfProvidedParameter } from './getDataTypes';
 
 
 /**
@@ -9,7 +9,7 @@ import { default as getDataTypeOfProvidedValues } from './getDataTypes';
  *
  * @returns {*}
 */
-describe('Get the data type of the parameters provided', getDataTypeOfProvidedValues);
+describe('Get the data type of the parameters provided', getDataTypeOfProvidedParameter);
 
 /**
  * @description
@@ -17,4 +17,4 @@ describe('Get the data type of the parameters provided', getDataTypeOfProvidedVa
  *
  * @returns {*}
 */
-describe('Check if it the parameter is of data type expected', performDataTypeCheckAgainstValue);
+describe('Check if it the parameter is of data type expected', performDataTypeCheckOnProvidedParameter);

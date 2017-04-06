@@ -24,14 +24,13 @@ function getAssertionArguments() {
  *  Object parameter value/data type tests.
  *
  * @export
- * @returns {*}
  */
 function default_1() {
     describe('Object value', function () {
-        var info = 'from Object';
+        var dataTypeOfArgumentSupplied = 'Object';
         for (var _i = 0, _a = getAssertionArguments(); _i < _a.length; _i++) {
-            var parameter = _a[_i];
-            validate_1.default(info, __1.isObject, parameter);
+            var argumentSuppliedToMethod = _a[_i];
+            validate_1.default(dataTypeOfArgumentSupplied, __1.isObject, argumentSuppliedToMethod);
         }
     });
 }

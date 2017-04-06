@@ -1,2 +1,2 @@
-declare var _default: (valueSupplied: any) => string;
+declare var _default: (valueSuppliedToTheMethod: any) => string;
 export default _default;

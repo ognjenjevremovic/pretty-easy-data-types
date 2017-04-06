@@ -1,6 +1,6 @@
 //  Dependancies
-import { isDate } from '../../';
-import { default as validate } from './validate';
+import { isDate as isArgumentOfDateDataType } from '../..';
+import { default as performArgumentValidation } from './validate';
 
 
 /**
@@ -24,16 +24,19 @@ function getAssertionArguments() : Date[] {
  *  Instance of Date class parameter value/data type tests.
  *
  * @export
- * @returns {*}
  */
 export default function() : void {
 
     describe('Date value/data type', () : void => {
 
-        const info : string = 'from instance of Date class';
+        const dataTypeOfArgumentSupplied : string = 'instance of Date class';
 
-        for(const parameter of getAssertionArguments()) {
-            validate(info, isDate, parameter);
+        for(const argumentSuppliedToMethod of getAssertionArguments()) {
+            performArgumentValidation(
+                dataTypeOfArgumentSupplied,
+                isArgumentOfDateDataType,
+                argumentSuppliedToMethod
+            );
         }
     });
 }

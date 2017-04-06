@@ -1,5 +1,5 @@
 //  Dependancies
-import { default as validate } from './validate';
+import { default as performArgumentValidation } from './validate';
 
 
 /**
@@ -35,10 +35,14 @@ export default function() : void {
 
     describe('String value/data type', () : void => {
 
-        const info : string = 'from string';
+        const dataTypeOfArgumentSupplied : string = 'string';
 
-        for(const parameter of getAssertionArguments()) {
-            validate(info, 'string', parameter);
+        for(const argumentSuppliedToMethod of getAssertionArguments()) {
+            performArgumentValidation(
+                dataTypeOfArgumentSupplied,
+                'string',
+                argumentSuppliedToMethod
+            );
         }
     });
 }

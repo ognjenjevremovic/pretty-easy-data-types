@@ -1,1 +1,1 @@
-{"version":3,"file":"isNumber.js","sourceRoot":"","sources":["../../../lib/typeChecks/isNumber.ts"],"names":[],"mappings":";;AAAA,cAAc;AACd,wBAAkD;AAGlD;;;;;;;GAOG;AACH,kBAAe,UAAC,aAAmB,IAAe,OAAA,WAAiB,CAAC,aAAa,CAAC,KAAK,QAAQ,EAA7C,CAA6C,CAAC"}
+{"version":3,"file":"isNumber.js","sourceRoot":"","sources":["../../../lib/typeChecks/isNumber.ts"],"names":[],"mappings":";;AAAA,cAAc;AACd,wBAAmD;AAGnD;;;;;;;GAOG;AACH,kBAAe,UAAC,wBAA8B,IAAe,OAAA,WAAkB,CAAC,wBAAwB,CAAC,KAAK,QAAQ,EAAzD,CAAyD,CAAC"}

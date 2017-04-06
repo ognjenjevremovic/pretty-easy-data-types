@@ -8,12 +8,11 @@ var validate_1 = require("./validate");
  *  Null value parameter value/data type test.
  *
  * @export
- * @returns {*}
  */
 function default_1() {
     describe('Null value/data type', function () {
-        var info = 'from null';
-        validate_1.default(info, __1.isNull, null);
+        var dataTypeOfArgumentSupplied = 'null';
+        validate_1.default(dataTypeOfArgumentSupplied, __1.isNull, null);
     });
 }
 exports.default = default_1;

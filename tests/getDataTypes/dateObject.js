@@ -21,14 +21,13 @@ function getAssertionArguments() {
  *  Instance of Date class parameter value/data type tests.
  *
  * @export
- * @returns {*}
  */
 function default_1() {
     describe('Date value/data type', function () {
-        var info = 'from instance of Date class';
+        var dataTypeOfArgumentSupplied = 'instance of Date class';
         for (var _i = 0, _a = getAssertionArguments(); _i < _a.length; _i++) {
-            var parameter = _a[_i];
-            validate_1.default(info, 'date', parameter);
+            var argumentSuppliedToMethod = _a[_i];
+            validate_1.default(dataTypeOfArgumentSupplied, 'date', argumentSuppliedToMethod);
         }
     });
 }

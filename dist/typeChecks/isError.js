@@ -4,11 +4,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var __1 = require("..");
 /**
  * @description
- *  Checks if the provided value is an instance of a Error class
+ *  Checks if provided argument is an instance of a Error class
  *
  * @export
- * @param {*} value
+ * @param {*} argumentSuppliedToMethod
  * @returns {boolean}
  */
-exports.default = function (valueSupplied) { return __1.getType(valueSupplied) === 'error'; };
+exports.default = function (argumentSuppliedToMethod) { return __1.getType(argumentSuppliedToMethod) === 'error'; };
 //# sourceMappingURL=isError.js.map

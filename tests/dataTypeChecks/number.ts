@@ -1,6 +1,6 @@
 //  Dependancies
-import { isNumber } from '../..';
-import { default as validate } from './validate';
+import { isNumber as isArgumentOfNumberDataType } from '../..';
+import { default as performArgumentValidation } from './validate';
 
 
 /**
@@ -27,16 +27,19 @@ function getAssertionArguments() : number[] {
  *  Number parameter value/data type tests.
  *
  * @export
- * @returns {*}
  */
 export default function() : void {
 
     describe('Number value', () : void => {
 
-        const info : string = 'from number';
+        const dataTypeOfArgumentSupplied : string = 'number';
 
-        for(const parameter of getAssertionArguments()) {
-            validate(info, isNumber, parameter);
+        for(const argumentSuppliedToMethod of getAssertionArguments()) {
+            performArgumentValidation(
+                dataTypeOfArgumentSupplied,
+                isArgumentOfNumberDataType,
+                argumentSuppliedToMethod
+            );
         }
     });
 }

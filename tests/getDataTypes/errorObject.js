@@ -21,14 +21,13 @@ function getAssertionArguments() {
  *  Instance of Error class parameter value/data type tests.
  *
  * @export
- * @returns {*}
  */
 function default_1() {
     describe('Error value/data type', function () {
-        var info = 'from instance of Error class';
+        var dataTypeOfArgumentSupplied = 'instance of Error class';
         for (var _i = 0, _a = getAssertionArguments(); _i < _a.length; _i++) {
-            var parameter = _a[_i];
-            validate_1.default(info, 'error', parameter);
+            var argumentSuppliedToMethod = _a[_i];
+            validate_1.default(dataTypeOfArgumentSupplied, 'error', argumentSuppliedToMethod);
         }
     });
 }

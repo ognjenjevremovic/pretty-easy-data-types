@@ -4,11 +4,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var __1 = require("..");
 /**
  * @description
- *  Checks if the provided value is of an undefined data type
+ *  Checks if provided argument is of an undefined data type
  *
  * @export
- * @param {*} value
+ * @param {*} argumentSuppliedToMethod
  * @returns {boolean}
  */
-exports.default = function (valueSupplied) { return __1.getType(valueSupplied) === 'undefined'; };
+exports.default = function (argumentSuppliedToMethod) { return __1.getType(argumentSuppliedToMethod) === 'undefined'; };
 //# sourceMappingURL=isUndefined.js.map

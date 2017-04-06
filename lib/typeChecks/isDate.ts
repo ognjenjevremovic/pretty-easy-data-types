@@ -1,13 +1,13 @@
 //  Dependancy
-import { getType as getValuesDataType } from '..';
+import { getType as getDataTypeOfValue } from '..';
 
 
 /**
  * @description
- *  Checks if the provided value is an instance of a Date class
+ *  Checks if provided argument is an instance of a Date class
  *
  * @export
- * @param {*} value
+ * @param {*} argumentSuppliedToMethod
  * @returns {boolean}
  */
-export default (valueSupplied : any) : boolean => getValuesDataType(valueSupplied) === 'date';
+export default (argumentSuppliedToMethod : any) : boolean => getDataTypeOfValue(argumentSuppliedToMethod) === 'date';

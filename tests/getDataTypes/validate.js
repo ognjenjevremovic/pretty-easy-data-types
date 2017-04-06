@@ -13,10 +13,10 @@ var moduleShouldReturn = 'Should return';
  * @export
  * @param {string} valueReturnedShouldBe
  * @param {string} dataTypeOfValueShouldBe
- * @param {*} [getDataTypeOfValue]
+ * @param {*} [getDataTypeFromThisValue]
  */
-function default_1(valueReturnedShouldBe, dataTypeOfValueShouldBe, getDataTypeOfValue) {
-    it(moduleShouldReturn + " " + dataTypeOfValueShouldBe + " -> " + valueReturnedShouldBe + " data type", function () { return assert.equal(__1.getType(getDataTypeOfValue), dataTypeOfValueShouldBe); });
+function default_1(valueReturnedShouldBe, dataTypeOfValueShouldBe, getDataTypeFromValue) {
+    it(moduleShouldReturn + " " + dataTypeOfValueShouldBe + " from -> " + valueReturnedShouldBe + " data type value", function () { return assert.equal(__1.getType(getDataTypeFromValue), dataTypeOfValueShouldBe); });
 }
 exports.default = default_1;
 //# sourceMappingURL=validate.js.map

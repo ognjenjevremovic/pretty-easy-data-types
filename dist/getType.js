@@ -16,8 +16,8 @@ var getStringRepresentationOfDataType = Object.prototype.toString;
  * @param {*} value
  * @returns {string}
  */
-exports.default = function (valueSupplied) { return getStringRepresentationOfDataType
-    .call(valueSupplied)
+exports.default = function (valueSuppliedToTheMethod) { return getStringRepresentationOfDataType
+    .call(valueSuppliedToTheMethod)
     .split(' ')[1]
     .replace(/\W/g, '')
     .toLocaleLowerCase(); };

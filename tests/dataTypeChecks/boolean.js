@@ -20,14 +20,13 @@ function getAssertionArguments() {
  *  Boolean parameter value/data type tests.
  *
  * @export
- * @returns {*}
  */
 function default_1() {
     describe('Boolean value/data type', function () {
-        var info = 'from boolean';
+        var dataTypeOfArgumentSupplied = 'boolean';
         for (var _i = 0, _a = getAssertionArguments(); _i < _a.length; _i++) {
-            var parameter = _a[_i];
-            validate_1.default(info, __1.isBoolean, parameter);
+            var argumentSuppliedToMethod = _a[_i];
+            validate_1.default(dataTypeOfArgumentSupplied, __1.isBoolean, argumentSuppliedToMethod);
         }
     });
 }

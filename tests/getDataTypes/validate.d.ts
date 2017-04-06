@@ -6,6 +6,6 @@
  * @export
  * @param {string} valueReturnedShouldBe
  * @param {string} dataTypeOfValueShouldBe
- * @param {*} [getDataTypeOfValue]
+ * @param {*} [getDataTypeFromThisValue]
  */
-export default function (valueReturnedShouldBe: string, dataTypeOfValueShouldBe: string, getDataTypeOfValue?: any): void;
+export default function (valueReturnedShouldBe: string, dataTypeOfValueShouldBe: string, getDataTypeFromValue?: any): void;

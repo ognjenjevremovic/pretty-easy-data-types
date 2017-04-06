@@ -1,6 +1,6 @@
 //  Dependancies
 import * as assert from 'assert';
-import { getType } from '../..';
+import { getType as getValueDataType } from '../..';
 
 
 //  What should the module return
@@ -15,16 +15,16 @@ const moduleShouldReturn : string = 'Should return';
  * @export
  * @param {string} valueReturnedShouldBe
  * @param {string} dataTypeOfValueShouldBe
- * @param {*} [getDataTypeOfValue]
+ * @param {*} [getDataTypeFromThisValue]
  */
 export default function(
     valueReturnedShouldBe   : string,
     dataTypeOfValueShouldBe : string,
-    getDataTypeOfValue?     : any,
+    getDataTypeFromValue?   : any,
 ) : void {
 
     it(
-        `${moduleShouldReturn} ${dataTypeOfValueShouldBe} -> ${valueReturnedShouldBe} data type`,
-        () => assert.equal(getType(getDataTypeOfValue), dataTypeOfValueShouldBe)
+        `${moduleShouldReturn} ${dataTypeOfValueShouldBe} from -> ${valueReturnedShouldBe} data type value`,
+        () => assert.equal(getValueDataType(getDataTypeFromValue), dataTypeOfValueShouldBe)
     );
 }

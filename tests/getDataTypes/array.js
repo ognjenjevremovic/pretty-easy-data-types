@@ -6,7 +6,7 @@ var validate_1 = require("./validate");
  * @description
  *  Array parameters for which assertion is performed
  *
- * @returns {Array<any>}
+ * @returns {any[]}
  */
 function getAssertionArguments() {
     return [
@@ -24,14 +24,13 @@ function getAssertionArguments() {
  *  Array parameter value/data type tests.
  *
  * @export
- * @returns {*}
  */
 function default_1() {
     describe('Array data type', function () {
-        var info = 'from Array';
+        var dataTypeOfArgumentSupplied = 'Array';
         for (var _i = 0, _a = getAssertionArguments(); _i < _a.length; _i++) {
-            var parameter = _a[_i];
-            validate_1.default(info, 'array', parameter);
+            var argumentSuppliedToMethod = _a[_i];
+            validate_1.default(dataTypeOfArgumentSupplied, 'array', argumentSuppliedToMethod);
         }
     });
 }
