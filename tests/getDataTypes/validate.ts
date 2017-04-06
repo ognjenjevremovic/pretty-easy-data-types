@@ -13,9 +13,9 @@ const moduleShouldReturn : string = 'Should return';
  *  This is the test validator for all valid parameter values.
  *
  * @export
- * @param {string} valueReturnedShouldBe
+ * @param {string} dataTypeOfArgumentSupplied
  * @param {string} dataTypeOfValueShouldBe
- * @param {*} [getDataTypeFromThisValue]
+ * @param {*} [getDataTypeFromValue]
  */
 export default function(
     dataTypeOfArgumentSupplied  : string,

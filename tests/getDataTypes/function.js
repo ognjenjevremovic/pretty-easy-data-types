@@ -23,7 +23,7 @@ function getAssertionArguments() {
  * @export
  */
 function default_1() {
-    describe('Function value', function () {
+    describe('Function data type value', function () {
         var dataTypeOfArgumentSupplied = 'function';
         for (var _i = 0, _a = getAssertionArguments(); _i < _a.length; _i++) {
             var argumentSuppliedToMethod = _a[_i];

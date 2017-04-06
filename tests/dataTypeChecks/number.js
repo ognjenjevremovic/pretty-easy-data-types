@@ -27,7 +27,7 @@ function getAssertionArguments() {
  * @export
  */
 function default_1() {
-    describe('Number value', function () {
+    describe('Number data type value', function () {
         var dataTypeOfArgumentSupplied = 'number';
         for (var _i = 0, _a = getAssertionArguments(); _i < _a.length; _i++) {
             var argumentSuppliedToMethod = _a[_i];

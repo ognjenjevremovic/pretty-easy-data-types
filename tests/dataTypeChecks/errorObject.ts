@@ -27,7 +27,7 @@ function getAssertionArguments() : Error[] {
  */
 export default function() : void {
 
-    describe('Error value/data type', () : void => {
+    describe('Error data type value', () : void => {
 
         const dataTypeOfArgumentSupplied : string = 'instance of Error class';
 

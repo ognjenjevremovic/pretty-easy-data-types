@@ -10,7 +10,7 @@ var validate_1 = require("./validate");
  * @export
  */
 function default_1() {
-    describe('Undefined value/data type', function () {
+    describe('Undefined data type value', function () {
         var dataTypeOfArgumentSupplied = 'undefined';
         validate_1.default(dataTypeOfArgumentSupplied, __1.isUndefined);
         validate_1.default(dataTypeOfArgumentSupplied, __1.isUndefined, undefined);

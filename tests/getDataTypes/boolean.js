@@ -21,7 +21,7 @@ function getAssertionArguments() {
  * @export
  */
 function default_1() {
-    describe('Boolean value/data type', function () {
+    describe('Boolean data type value', function () {
         var dataTypeOfArgumentSupplied = 'boolean';
         for (var _i = 0, _a = getAssertionArguments(); _i < _a.length; _i++) {
             var argumentSuppliedToMethod = _a[_i];

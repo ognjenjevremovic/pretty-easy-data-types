@@ -11,7 +11,7 @@ import { default as performArgumentValidation } from './validate';
  */
 export default function() : void {
 
-    describe('Null value/data type', () : void => {
+    describe('Null data type value', () : void => {
 
         const dataTypeOfArgumentSupplied : string = 'null';
 

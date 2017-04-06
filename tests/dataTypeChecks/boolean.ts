@@ -25,7 +25,7 @@ function getAssertionArguments() : boolean[] {
  */
 export default function() : void {
 
-    describe('Boolean value/data type', () : void => {
+    describe('Boolean data type value', () : void => {
 
         const dataTypeOfArgumentSupplied : string = 'boolean';
 

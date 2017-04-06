@@ -30,7 +30,7 @@ function getAssertionArguments() : number[] {
  */
 export default function() : void {
 
-    describe('Number value', () : void => {
+    describe('Number data type value', () : void => {
 
         const dataTypeOfArgumentSupplied : string = 'number';
 

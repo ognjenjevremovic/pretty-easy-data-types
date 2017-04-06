@@ -28,7 +28,7 @@ function getAssertionArguments() : object[] {
  */
 export default function() : void {
 
-    describe('Object value', () : void => {
+    describe('Object data type value', () : void => {
 
         const dataTypeOfArgumentSupplied : string = 'Object';
 

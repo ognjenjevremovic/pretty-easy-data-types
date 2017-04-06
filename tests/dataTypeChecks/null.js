@@ -10,7 +10,7 @@ var validate_1 = require("./validate");
  * @export
  */
 function default_1() {
-    describe('Null value/data type', function () {
+    describe('Null data type value', function () {
         var dataTypeOfArgumentSupplied = 'null';
         validate_1.default(dataTypeOfArgumentSupplied, __1.isNull, null);
     });

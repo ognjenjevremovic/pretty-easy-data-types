@@ -11,9 +11,9 @@ var moduleShouldReturn = 'Should return';
  *  This is the test validator for all valid parameter values.
  *
  * @export
- * @param {string} valueReturnedShouldBe
+ * @param {string} dataTypeOfArgumentSupplied
  * @param {string} dataTypeOfValueShouldBe
- * @param {*} [getDataTypeFromThisValue]
+ * @param {*} [getDataTypeFromValue]
  */
 function default_1(dataTypeOfArgumentSupplied, dataTypeOfValueShouldBe, getDataTypeFromValue) {
     it(moduleShouldReturn + " " + dataTypeOfValueShouldBe + " from -> " + dataTypeOfArgumentSupplied + " data type value", function () { return assert.equal(__1.getType(getDataTypeFromValue), dataTypeOfValueShouldBe); });

@@ -26,7 +26,7 @@ function getAssertionArguments() : Date[] {
  */
 export default function() : void {
 
-    describe('Date value/data type', () : void => {
+    describe('Date data type value', () : void => {
 
         const dataTypeOfArgumentSupplied : string = 'instance of Date class';
 

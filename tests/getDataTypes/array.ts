@@ -29,7 +29,7 @@ function getAssertionArguments() : any[] {
  */
 export default function() : void {
 
-    describe('Array data type', () => {
+    describe('Array data type value', () => {
 
         const dataTypeOfArgumentSupplied : string = 'Array';
 

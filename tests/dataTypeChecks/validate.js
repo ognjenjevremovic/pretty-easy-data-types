@@ -10,9 +10,9 @@ var moduleShouldReturn = 'Should return boolean true from ->';
  *  This is the test validator for all valid parameter values.
  *
  * @export
- * @param {string} valueReturnedShouldBe
+ * @param {string} dataTypeOfArgumentSupplied
  * @param {(argumentSuppliedToMethod : any) => boolean} isOfCertainDataTypeMethod
- * @param {*} [getDataTypeFromThisValue]
+ * @param {*} [getDataTypeFromValue]
  */
 function default_1(dataTypeOfArgumentSupplied, isOfCertainDataTypeMethod, getDataTypeFromValue) {
     it("\n        " + moduleShouldReturn + " " + dataTypeOfArgumentSupplied + " data type value", function () { return assert.equal(isOfCertainDataTypeMethod(getDataTypeFromValue), true); });

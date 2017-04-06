@@ -12,9 +12,9 @@ const moduleShouldReturn : string = 'Should return boolean true from ->';
  *  This is the test validator for all valid parameter values.
  *
  * @export
- * @param {string} valueReturnedShouldBe
+ * @param {string} dataTypeOfArgumentSupplied
  * @param {(argumentSuppliedToMethod : any) => boolean} isOfCertainDataTypeMethod
- * @param {*} [getDataTypeFromThisValue]
+ * @param {*} [getDataTypeFromValue]
  */
 export default function(
     dataTypeOfArgumentSupplied : string,

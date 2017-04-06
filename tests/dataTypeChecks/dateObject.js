@@ -24,7 +24,7 @@ function getAssertionArguments() {
  * @export
  */
 function default_1() {
-    describe('Date value/data type', function () {
+    describe('Date data type value', function () {
         var dataTypeOfArgumentSupplied = 'instance of Date class';
         for (var _i = 0, _a = getAssertionArguments(); _i < _a.length; _i++) {
             var argumentSuppliedToMethod = _a[_i];

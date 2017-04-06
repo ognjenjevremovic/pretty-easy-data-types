@@ -11,7 +11,7 @@ import { default as performArgumentValidation } from './validate';
  */
 export default function() : void {
 
-    describe('Undefined value/data type', () : void => {
+    describe('Undefined data type value', () : void => {
 
         const dataTypeOfArgumentSupplied : string = 'undefined';
 

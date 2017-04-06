@@ -24,7 +24,7 @@ function getAssertionArguments() {
  * @export
  */
 function default_1() {
-    describe('Error value/data type', function () {
+    describe('Error data type value', function () {
         var dataTypeOfArgumentSupplied = 'instance of Error class';
         for (var _i = 0, _a = getAssertionArguments(); _i < _a.length; _i++) {
             var argumentSuppliedToMethod = _a[_i];
