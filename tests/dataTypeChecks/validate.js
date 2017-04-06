@@ -14,8 +14,8 @@ var moduleShouldReturn = 'Should return boolean true from ->';
  * @param {(argumentSuppliedToMethod : any) => boolean} isOfCertainDataTypeMethod
  * @param {*} [getDataTypeFromThisValue]
  */
-function default_1(valueReturnedShouldBe, isOfCertainDataTypeMethod, getDataTypeFromValue) {
-    it("\n        " + moduleShouldReturn + " " + valueReturnedShouldBe + " data type value", function () { return assert.equal(isOfCertainDataTypeMethod(getDataTypeFromValue), true); });
+function default_1(dataTypeOfArgumentSupplied, isOfCertainDataTypeMethod, getDataTypeFromValue) {
+    it("\n        " + moduleShouldReturn + " " + dataTypeOfArgumentSupplied + " data type value", function () { return assert.equal(isOfCertainDataTypeMethod(getDataTypeFromValue), true); });
 }
 exports.default = default_1;
 //# sourceMappingURL=validate.js.map

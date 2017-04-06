@@ -8,4 +8,4 @@
  * @param {string} dataTypeOfValueShouldBe
  * @param {*} [getDataTypeFromThisValue]
  */
-export default function (valueReturnedShouldBe: string, dataTypeOfValueShouldBe: string, getDataTypeFromValue?: any): void;
+export default function (dataTypeOfArgumentSupplied: string, dataTypeOfValueShouldBe: string, getDataTypeFromValue?: any): void;

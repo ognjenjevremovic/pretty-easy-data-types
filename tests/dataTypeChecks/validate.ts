@@ -17,13 +17,13 @@ const moduleShouldReturn : string = 'Should return boolean true from ->';
  * @param {*} [getDataTypeFromThisValue]
  */
 export default function(
-    valueReturnedShouldBe     : string,
-    isOfCertainDataTypeMethod : (argumentSuppliedToMethod : any) => boolean,
-    getDataTypeFromValue?     : any
+    dataTypeOfArgumentSupplied : string,
+    isOfCertainDataTypeMethod  : (argumentSuppliedToMethod : any) => boolean,
+    getDataTypeFromValue?      : any
 ) : void {
 
     it(`
-        ${moduleShouldReturn} ${valueReturnedShouldBe} data type value`,
+        ${moduleShouldReturn} ${dataTypeOfArgumentSupplied} data type value`,
         () => assert.equal(isOfCertainDataTypeMethod(getDataTypeFromValue), true)
     );
 }

@@ -8,4 +8,4 @@
  * @param {(argumentSuppliedToMethod : any) => boolean} isOfCertainDataTypeMethod
  * @param {*} [getDataTypeFromThisValue]
  */
-export default function (valueReturnedShouldBe: string, isOfCertainDataTypeMethod: (argumentSuppliedToMethod: any) => boolean, getDataTypeFromValue?: any): void;
+export default function (dataTypeOfArgumentSupplied: string, isOfCertainDataTypeMethod: (argumentSuppliedToMethod: any) => boolean, getDataTypeFromValue?: any): void;

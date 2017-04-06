@@ -18,13 +18,13 @@ const moduleShouldReturn : string = 'Should return';
  * @param {*} [getDataTypeFromThisValue]
  */
 export default function(
-    valueReturnedShouldBe   : string,
-    dataTypeOfValueShouldBe : string,
-    getDataTypeFromValue?   : any,
+    dataTypeOfArgumentSupplied  : string,
+    dataTypeOfValueShouldBe     : string,
+    getDataTypeFromValue?       : any,
 ) : void {
 
     it(
-        `${moduleShouldReturn} ${dataTypeOfValueShouldBe} from -> ${valueReturnedShouldBe} data type value`,
+        `${moduleShouldReturn} ${dataTypeOfValueShouldBe} from -> ${dataTypeOfArgumentSupplied} data type value`,
         () => assert.equal(getValueDataType(getDataTypeFromValue), dataTypeOfValueShouldBe)
     );
 }
